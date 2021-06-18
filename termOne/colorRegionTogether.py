@@ -15,9 +15,9 @@ color_select= np.copy(image)
 line_image = np.copy(image)
 
 # Define our color criteria
-red_threshold = 0
-green_threshold = 0
-blue_threshold = 0
+red_threshold = 200
+green_threshold = 200
+blue_threshold = 200
 rgb_threshold = [red_threshold, green_threshold, blue_threshold]
 
 # Define a triangle region of interest (Note: if you run this code, 
@@ -25,8 +25,8 @@ rgb_threshold = [red_threshold, green_threshold, blue_threshold]
 # you'll find these are not sensible values!!
 # But you'll get a chance to play with them soon in a quiz ;)
 left_bottom = [0, 539]
-right_bottom = [900, 300]
-apex = [400, 0]
+right_bottom = [952, 528]
+apex = [462, 327]
 
 fit_left = np.polyfit((left_bottom[0], apex[0]), (left_bottom[1], apex[1]), 1)
 fit_right = np.polyfit((right_bottom[0], apex[0]), (right_bottom[1], apex[1]), 1)
@@ -52,4 +52,4 @@ plt.imshow(color_select)
 plt.imshow(line_image)
 
 # uncomment if plot does not display
-# plt.show()
+plt.show()
